@@ -1,0 +1,14 @@
+ldd $(which curl)
+find the /usr/local
+
+cd ~/Desktop/lab0/curl-7.84.0
+make clean  # to clear out previous builds
+./configure --with-openssl --prefix=/usr/local
+make
+sudo make install
+
+test with 
+curl --version 
+if doesnt work
+
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
