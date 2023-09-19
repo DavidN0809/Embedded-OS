@@ -1,6 +1,8 @@
 # Embedded-OS
 ## Lab 0
+### Goals
 - Install curl from source
+### How I did it
 - make clean  # to clear out previous builds
 - ./configure --with-openssl --prefix=/usr/local
 - make
@@ -13,3 +15,6 @@ test with
 
 if doesnt work
 - export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+## Lab 1
+### Goals
