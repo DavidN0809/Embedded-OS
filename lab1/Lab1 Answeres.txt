@@ -1,0 +1,101 @@
+﻿1. What is the memory address of stack_top label specified in startup.s? How much (in bytes) does the stack grow during the execution of the program?
+The memory address of the stack_top label is 0x110b8.
+The current value of the stack pointer (sp) during execution is 0x110a0.
+So 0x110b8 - 0x110a0 = 0x18 bytes. Or 24 bytes in decimal.
+
+2. At which memory location is the string “Hello world!\n” stored? Print out the contents of the 13 bytes of memory at this location (x /13c <mem address>)
+x/13c 0x000100a8
+0x100a8:        72 'H'        101 'e'        108 'l'        108 'l'        111 'o'        32 ' '        119 'w'        111 'o'
+0x100b0:        114 'r'        108 'l'        100 'd'        33 '!'        10 '\n'
+
+3. How is this string passed to the function print_uart0() from c_entry()?
+From the disassembly of c_entry(), we see the instruction:
+   0x00010090 <+8>:        ldr        r0, [pc, #8]        ; 0x100a0 <c_entry+24>
+This loads the address of the string "Hello world!\n" (0x100a8) into register r0. Then, the bl instruction is used to call the function:
+   0x00010094 <+12>:        bl        0x10030 <print_uart0>
+This means the address of the string is passed as the first argument to print_uart0() using register r0.
+
+
+4. Identify the assembly instructions that implement the while loop of the function
+print_uart0().
+Loop:
+   0x00010060 <+48>:ldr        r3, [r11, #-8]
+   0x00010064 <+52>:ldrb        r3, [r3]
+   0x00010068 <+56>:cmp        r3, #0
+   0x0001006c <+60>:bne        0x10044 <print_uart0+20>
+The loop in the print_uart0 function iterates between 0x00010044 <+20> and 0x0001006c <+60>.
+0x00010060 <+48>: ldr r3, [r11, #-8] - This instruction retrieves the address of the current character from the string and stores it in the register r3.
+0x00010064 <+52>: ldrb r3, [r3] - The byte (i.e., the character) at that address is loaded into r3.
+0x00010068 <+56>: cmp r3, #0 - The character is compared to 0, which is the ASCII representation of the null terminator ('\0').
+0x0001006c <+60>: bne 0x10044 <print_uart0+20> - If the character is not the null terminator, execution jumps back to 0x10044, marking the beginning of the loop body, to process the next character in the string.
+The loop will keep iterating over each character in the string and print them until it encounters the null terminator, signaling the end of the string.
+
+
+
+
+
+
+5. What is the endianness of this processor? Demonstrate by showing the memory layout of a multibyte word in memory.
+Little Indian
+x/4b 0x100a0
+0x100a0 <c_entry+24>:        -88 '\250'        0 '\000'        1 '\001'        0 '\000'
+
+
+How I got answers
+gdb-multiarch
+(gdb)  target remote 127.0.0.1:1234
+(gdb) file hello_world.elf
+A program is being debugged already.
+Are you sure you want to change the file? (y or n) y
+Reading symbols from hello_world.elf…
+QUESTION 1
+(gdb) info address stack_top
+Symbol "stack_top" is at 0x110b8 in a file compiled without debugging.
+(gdb)  info registers sp
+sp             0x110b8             0x110b8
+QUESTION 3
+(gdb) disassemble c_entry
+Dump of assembler code for function c_entry:
+   0x00010088 <+0>:        push        {r11, lr}
+   0x0001008c <+4>:        add        r11, sp, #4
+   0x00010090 <+8>:        ldr        r0, [pc, #8]        ; 0x100a0 <c_entry+24>
+   0x00010094 <+12>:        bl        0x10030 <print_uart0>
+   0x00010098 <+16>:        nop                        ; (mov r0, r0)
+   0x0001009c <+20>:        pop        {r11, pc}
+   0x000100a0 <+24>:        andeq        r0, r1, r8, lsr #1
+End of assembler dump.
+QUESTION 2
+(gdb) x/x 0x100a0
+0x100a0 <c_entry+24>:        0x000100a8
+(gdb) x/13c 0x000100a8
+0x100a8:        72 'H'        101 'e'        108 'l'        108 'l'        111 'o'        32 ' '        119 'w'        111 'o'
+0x100b0:        114 'r'        108 'l'        100 'd'        33 '!'        10 '\n'
+QUESTION 4
+(gdb) disassemble print_uart0
+Dump of assembler code for function print_uart0:
+   0x00010030 <+0>:        push        {r11}                ; (str r11, [sp, #-4]!)
+   0x00010034 <+4>:        add        r11, sp, #0
+   0x00010038 <+8>:        sub        sp, sp, #12
+   0x0001003c <+12>:        str        r0, [r11, #-8]
+   0x00010040 <+16>:        b        0x10060 <print_uart0+48>
+   0x00010044 <+20>:        ldr        r3, [r11, #-8]
+   0x00010048 <+24>:        ldrb        r2, [r3]
+   0x0001004c <+28>:        ldr        r3, [pc, #48]        ; 0x10084 <print_uart0+84>
+   0x00010050 <+32>:        str        r2, [r3]
+   0x00010054 <+36>:        ldr        r3, [r11, #-8]
+   0x00010058 <+40>:        add        r3, r3, #1
+   0x0001005c <+44>:        str        r3, [r11, #-8]
+   0x00010060 <+48>:ldr        r3, [r11, #-8]
+   0x00010064 <+52>:ldrb        r3, [r3]
+   0x00010068 <+56>:cmp        r3, #0
+   0x0001006c <+60>:bne        0x10044 <print_uart0+20>
+   0x00010070 <+64>:        nop                        ; (mov r0, r0)
+   0x00010074 <+68>:        nop                        ; (mov r0, r0)
+   0x00010078 <+72>:        add        sp, r11, #0
+   0x0001007c <+76>:        pop        {r11}                ; (ldr r11, [sp], #4)
+   0x00010080 <+80>:        bx        lr
+   0x00010084 <+84>:        andsne        r1, pc, r0
+End of assembler dump.
+QUESTION 5
+(gdp) x/4b 0x100a0
+0x100a0 <c_entry+24>:        -88 '\250'        0 '\000'        1 '\001'        0 '\000'
