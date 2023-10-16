@@ -1,3 +1,5 @@
+### Guide is in .txt
+
 changed 
 qemu-system-arm -M versatilepb -m 128M -nographic -kernel hello_world.bin
 to
