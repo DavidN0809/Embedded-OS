@@ -1,0 +1,1 @@
+savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/Module.symvers :=  scripts/mod/modpost        -o /home/david/Documents/GitHub/Embedded-OS/Lab4/Module.symvers -T /home/david/Documents/GitHub/Embedded-OS/Lab4/modules.order -i Module.symvers -e 

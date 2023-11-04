@@ -1,0 +1,1 @@
+savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/mem.ko := arm-linux-gnueabi-ld -r -EL -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/david/Documents/GitHub/Embedded-OS/Lab4/mem.ko /home/david/Documents/GitHub/Embedded-OS/Lab4/mem.o /home/david/Documents/GitHub/Embedded-OS/Lab4/mem.mod.o;  true

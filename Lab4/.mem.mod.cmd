@@ -1,0 +1,1 @@
+savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/mem.mod := printf '%s\n'   mem.o | awk '!x[$$0]++ { print("/home/david/Documents/GitHub/Embedded-OS/Lab4/"$$0) }' > /home/david/Documents/GitHub/Embedded-OS/Lab4/mem.mod
