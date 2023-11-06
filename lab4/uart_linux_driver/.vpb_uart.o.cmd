@@ -1,11 +1,8 @@
-savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o := arm-linux-gnueabi-gcc -Wp,-MMD,/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/.vpb_uart.mod.o.d -nostdinc -I./arch/arm/include -I./arch/arm/include/generated -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -D__LINUX_ARM_ARCH__=5 -fmacro-prefix-map=./= -std=gnu11 -fshort-wchar -funsigned-char -fno-common -fno-PIE -fno-strict-aliasing -Wall -Wundef -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Werror=strict-prototypes -Wno-format-security -Wno-trigraphs -fno-dwarf2-cfi-asm -mno-fdpic -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -Wa,-mno-warn-deprecated -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-stack-clash-protection -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-stringop-truncation -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-array-bounds -Wno-alloc-size-larger-than -Wimplicit-fallthrough=5 -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -DMODULE -DKBUILD_BASENAME='"vpb_uart.mod"' -DKBUILD_MODNAME='"vpb_uart"' -D__KBUILD_MODNAME=kmod_vpb_uart -c -o /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.c
+savedcmd_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o := arm-linux-gnueabi-gcc -Wp,-MMD,/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/.vpb_uart.o.d -nostdinc -I./arch/arm/include -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./arch/arm/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -include ./include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -D__LINUX_ARM_ARCH__=5 -fmacro-prefix-map=./= -std=gnu11 -fshort-wchar -funsigned-char -fno-common -fno-PIE -fno-strict-aliasing -Wall -Wundef -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Werror=strict-prototypes -Wno-format-security -Wno-trigraphs -fno-dwarf2-cfi-asm -mno-fdpic -fno-ipa-sra -mabi=aapcs-linux -mfpu=vfp -funwind-tables -marm -Wa,-mno-warn-deprecated -march=armv5te -mtune=arm9tdmi -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=1024 -fstack-protector-strong -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-stack-clash-protection -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-stringop-truncation -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-array-bounds -Wno-alloc-size-larger-than -Wimplicit-fallthrough=5 -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"vpb_uart"' -DKBUILD_MODNAME='"vpb_uart"' -D__KBUILD_MODNAME=kmod_vpb_uart -c -o /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.c  
 
-source_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o := /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.c
+source_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o := /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.c
 
-deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o := \
-    $(wildcard include/config/UNWINDER_ORC) \
-    $(wildcard include/config/MODULE_UNLOAD) \
-    $(wildcard include/config/RETPOLINE) \
+deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o := \
   include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   include/linux/kconfig.h \
@@ -21,9 +18,11 @@ deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mo
     $(wildcard include/config/CC_HAS_ASM_INLINE) \
   include/linux/compiler_attributes.h \
   include/linux/compiler-gcc.h \
+    $(wildcard include/config/RETPOLINE) \
     $(wildcard include/config/ARCH_USE_BUILTIN_BSWAP) \
     $(wildcard include/config/SHADOW_CALL_STACK) \
     $(wildcard include/config/KCOV) \
+  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.h \
   include/linux/module.h \
     $(wildcard include/config/MODULES) \
     $(wildcard include/config/SYSFS) \
@@ -47,6 +46,7 @@ deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mo
     $(wildcard include/config/HAVE_STATIC_CALL_INLINE) \
     $(wildcard include/config/KUNIT) \
     $(wildcard include/config/PRINTK_INDEX) \
+    $(wildcard include/config/MODULE_UNLOAD) \
     $(wildcard include/config/CONSTRUCTORS) \
     $(wildcard include/config/FUNCTION_ERROR_INJECTION) \
     $(wildcard include/config/DYNAMIC_DEBUG_CORE) \
@@ -736,18 +736,190 @@ deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mo
     $(wildcard include/config/MODULES_USE_ELF_REL) \
     $(wildcard include/config/MODULES_USE_ELF_RELA) \
   arch/arm/include/asm/unwind.h \
-  include/linux/build-salt.h \
-    $(wildcard include/config/BUILD_SALT) \
-  include/linux/elfnote.h \
-  include/linux/elfnote-lto.h \
-    $(wildcard include/config/LTO) \
-  include/linux/export-internal.h \
-    $(wildcard include/config/PARISC) \
-  include/linux/vermagic.h \
-    $(wildcard include/config/PREEMPT_BUILD) \
-  include/generated/utsrelease.h \
-  arch/arm/include/asm/vermagic.h \
+  include/linux/slab.h \
+    $(wildcard include/config/DEBUG_SLAB) \
+    $(wildcard include/config/SLUB_TINY) \
+    $(wildcard include/config/FAILSLAB) \
+    $(wildcard include/config/MEMCG_KMEM) \
+    $(wildcard include/config/KFENCE) \
+    $(wildcard include/config/SLAB) \
+    $(wildcard include/config/SLUB) \
+  include/linux/overflow.h \
+  include/linux/percpu-refcount.h \
+  include/linux/kasan.h \
+    $(wildcard include/config/KASAN_STACK) \
+    $(wildcard include/config/KASAN_VMALLOC) \
+    $(wildcard include/config/KASAN_INLINE) \
+  include/linux/kasan-enabled.h \
+  include/linux/fs.h \
+    $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
+    $(wildcard include/config/FS_POSIX_ACL) \
+    $(wildcard include/config/CGROUP_WRITEBACK) \
+    $(wildcard include/config/IMA) \
+    $(wildcard include/config/FILE_LOCKING) \
+    $(wildcard include/config/FSNOTIFY) \
+    $(wildcard include/config/FS_ENCRYPTION) \
+    $(wildcard include/config/FS_VERITY) \
+    $(wildcard include/config/EPOLL) \
+    $(wildcard include/config/UNICODE) \
+    $(wildcard include/config/QUOTA) \
+    $(wildcard include/config/FS_DAX) \
+    $(wildcard include/config/BLOCK) \
+  include/linux/wait_bit.h \
+  include/linux/kdev_t.h \
+  include/uapi/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/ARCH_USE_CMPXCHG_LOCKREF) \
+  include/linux/stringhash.h \
+    $(wildcard include/config/DCACHE_WORD_ACCESS) \
+  include/linux/hash.h \
+    $(wildcard include/config/HAVE_ARCH_HASH) \
+  include/linux/path.h \
+  include/linux/list_lru.h \
+  include/linux/shrinker.h \
+    $(wildcard include/config/SHRINKER_DEBUG) \
+  include/linux/capability.h \
+  include/uapi/linux/capability.h \
+  include/linux/semaphore.h \
+  include/linux/fcntl.h \
+    $(wildcard include/config/ARCH_32BIT_OFF_T) \
+  include/uapi/linux/fcntl.h \
+  arch/arm/include/uapi/asm/fcntl.h \
+  include/uapi/asm-generic/fcntl.h \
+  include/uapi/linux/openat2.h \
+  include/linux/migrate_mode.h \
+  include/linux/percpu-rwsem.h \
+  include/linux/rcuwait.h \
+  include/linux/sched/signal.h \
+    $(wildcard include/config/SCHED_AUTOGROUP) \
+    $(wildcard include/config/BSD_PROCESS_ACCT) \
+    $(wildcard include/config/TASKSTATS) \
+    $(wildcard include/config/STACK_GROWSUP) \
+  include/linux/signal.h \
+    $(wildcard include/config/DYNAMIC_SIGFRAME) \
+    $(wildcard include/config/PROC_FS) \
+  include/linux/sched/jobctl.h \
+  include/linux/sched/task.h \
+    $(wildcard include/config/HAVE_EXIT_THREAD) \
+    $(wildcard include/config/ARCH_WANTS_DYNAMIC_TASK_STRUCT) \
+    $(wildcard include/config/HAVE_ARCH_THREAD_STRUCT_WHITELIST) \
+  include/linux/uaccess.h \
+    $(wildcard include/config/ARCH_HAS_SUBPAGE_FAULTS) \
+  include/linux/fault-inject-usercopy.h \
+    $(wildcard include/config/FAULT_INJECTION_USERCOPY) \
+  arch/arm/include/asm/uaccess.h \
+    $(wildcard include/config/CPU_SW_DOMAIN_PAN) \
+    $(wildcard include/config/CPU_USE_DOMAINS) \
+    $(wildcard include/config/HAVE_EFFICIENT_UNALIGNED_ACCESS) \
+    $(wildcard include/config/UACCESS_WITH_MEMCPY) \
+  arch/arm/include/asm/domain.h \
+    $(wildcard include/config/IO_36) \
+    $(wildcard include/config/CPU_CP15_MMU) \
+  arch/arm/include/generated/asm/unaligned.h \
+  include/asm-generic/unaligned.h \
+  include/linux/unaligned/packed_struct.h \
+  arch/arm/include/generated/asm/extable.h \
+  include/asm-generic/extable.h \
+  include/asm-generic/access_ok.h \
+    $(wildcard include/config/ALTERNATE_USER_ADDRESS_SPACE) \
+  include/linux/cred.h \
+    $(wildcard include/config/DEBUG_CREDENTIALS) \
+  include/linux/key.h \
+    $(wildcard include/config/KEY_NOTIFICATIONS) \
+    $(wildcard include/config/NET) \
+  include/linux/assoc_array.h \
+    $(wildcard include/config/ASSOCIATIVE_ARRAY) \
+  include/linux/sched/user.h \
+    $(wildcard include/config/VFIO_PCI_ZDEV_KVM) \
+    $(wildcard include/config/IOMMUFD) \
+    $(wildcard include/config/WATCH_QUEUE) \
+  include/linux/ratelimit.h \
+  include/linux/rcu_sync.h \
+  include/linux/delayed_call.h \
+  include/linux/uuid.h \
+  include/linux/errseq.h \
+  include/linux/ioprio.h \
+  include/linux/sched/rt.h \
+  include/linux/iocontext.h \
+    $(wildcard include/config/BLK_ICQ) \
+  include/uapi/linux/ioprio.h \
+  include/linux/fs_types.h \
+  include/linux/mount.h \
+  include/linux/mnt_idmapping.h \
+  include/uapi/linux/fs.h \
+  include/linux/quota.h \
+    $(wildcard include/config/QUOTA_NETLINK_INTERFACE) \
+  include/uapi/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/projid.h \
+  include/uapi/linux/quota.h \
+  include/linux/cdev.h \
+  include/linux/device.h \
+    $(wildcard include/config/GENERIC_MSI_IRQ) \
+    $(wildcard include/config/ENERGY_MODEL) \
+    $(wildcard include/config/PINCTRL) \
+    $(wildcard include/config/DMA_OPS) \
+    $(wildcard include/config/DMA_DECLARE_COHERENT) \
+    $(wildcard include/config/DMA_CMA) \
+    $(wildcard include/config/SWIOTLB) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_DEVICE) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU_ALL) \
+    $(wildcard include/config/DMA_OPS_BYPASS) \
+    $(wildcard include/config/PM_SLEEP) \
+    $(wildcard include/config/OF) \
+    $(wildcard include/config/DEVTMPFS) \
+  include/linux/dev_printk.h \
+  include/linux/energy_model.h \
+  include/linux/sched/cpufreq.h \
+    $(wildcard include/config/CPU_FREQ) \
+  include/linux/sched/topology.h \
+    $(wildcard include/config/SCHED_DEBUG) \
+    $(wildcard include/config/SCHED_CLUSTER) \
+    $(wildcard include/config/SCHED_MC) \
+    $(wildcard include/config/CPU_FREQ_GOV_SCHEDUTIL) \
+  include/linux/sched/idle.h \
+  include/linux/ioport.h \
+  include/linux/klist.h \
+  include/linux/pm.h \
+    $(wildcard include/config/VT_CONSOLE_SLEEP) \
+    $(wildcard include/config/CXL_SUSPEND) \
+    $(wildcard include/config/PM) \
+    $(wildcard include/config/PM_CLK) \
+    $(wildcard include/config/PM_GENERIC_DOMAINS) \
+  include/linux/device/bus.h \
+    $(wildcard include/config/ACPI) \
+  include/linux/device/class.h \
+  include/linux/device/driver.h \
+  arch/arm/include/asm/device.h \
+    $(wildcard include/config/ARM_DMA_USE_IOMMU) \
+    $(wildcard include/config/ARCH_OMAP) \
+  include/linux/pm_wakeup.h \
+  arch/arm/include/asm/io.h \
+    $(wildcard include/config/PCI) \
+    $(wildcard include/config/PCMCIA) \
+    $(wildcard include/config/NEED_MACH_IO_H) \
+  include/asm-generic/pci_iomap.h \
+    $(wildcard include/config/NO_GENERIC_PCI_IOPORT_MAP) \
+    $(wildcard include/config/HAS_IOPORT_MAP) \
+    $(wildcard include/config/GENERIC_PCI_IOMAP) \
+  include/asm-generic/io.h \
+    $(wildcard include/config/GENERIC_IOMAP) \
+    $(wildcard include/config/TRACE_MMIO_ACCESS) \
+    $(wildcard include/config/GENERIC_IOREMAP) \
+  include/linux/logic_pio.h \
+    $(wildcard include/config/INDIRECT_PIO) \
+  include/linux/fwnode.h \
+  include/linux/vmalloc.h \
+    $(wildcard include/config/HAVE_ARCH_HUGE_VMALLOC) \
+  arch/arm/include/asm/vmalloc.h \
 
-/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o: $(deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o)
+/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o: $(deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o)
 
-$(deps_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod.o):
+$(deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o):

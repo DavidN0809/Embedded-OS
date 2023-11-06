@@ -1,1 +1,0 @@
-savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod := printf '%s\n'   vpb_uart.o | awk '!x[$$0]++ { print("/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/"$$0) }' > /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.mod

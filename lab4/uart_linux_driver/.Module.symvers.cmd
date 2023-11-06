@@ -1,0 +1,1 @@
+savedcmd_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/Module.symvers :=  scripts/mod/modpost        -o /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/Module.symvers -T /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/modules.order -i Module.symvers -e 

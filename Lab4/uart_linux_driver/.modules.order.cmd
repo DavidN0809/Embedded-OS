@@ -1,1 +1,0 @@
-savedcmd_/home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/modules.order := {   echo /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/vpb_uart.o; :; } > /home/david/Documents/GitHub/Embedded-OS/Lab4/uart_linux_driver/modules.order
