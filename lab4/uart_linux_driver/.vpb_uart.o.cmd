@@ -23,7 +23,7 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
     $(wildcard include/config/SHADOW_CALL_STACK) \
     $(wildcard include/config/KCOV) \
   /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/module.h \
+  include/linux/module.h \
     $(wildcard include/config/MODULES) \
     $(wildcard include/config/SYSFS) \
     $(wildcard include/config/MODULES_TREE_LOOKUP) \
@@ -736,10 +736,7 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
     $(wildcard include/config/MODULES_USE_ELF_REL) \
     $(wildcard include/config/MODULES_USE_ELF_RELA) \
   arch/arm/include/asm/unwind.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/moduleparam.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/init.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/kernel.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/slab.h \
+  include/linux/slab.h \
     $(wildcard include/config/DEBUG_SLAB) \
     $(wildcard include/config/SLUB_TINY) \
     $(wildcard include/config/FAILSLAB) \
@@ -754,7 +751,7 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
     $(wildcard include/config/KASAN_VMALLOC) \
     $(wildcard include/config/KASAN_INLINE) \
   include/linux/kasan-enabled.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/fs.h \
+  include/linux/fs.h \
     $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
     $(wildcard include/config/FS_POSIX_ACL) \
     $(wildcard include/config/CGROUP_WRITEBACK) \
@@ -853,7 +850,6 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
   include/linux/fs_types.h \
   include/linux/mount.h \
   include/linux/mnt_idmapping.h \
-  include/linux/slab.h \
   include/uapi/linux/fs.h \
   include/linux/quota.h \
     $(wildcard include/config/QUOTA_NETLINK_INTERFACE) \
@@ -863,9 +859,7 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
   include/linux/dqblk_qtree.h \
   include/linux/projid.h \
   include/uapi/linux/quota.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/errno.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/types.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/cdev.h \
+  include/linux/cdev.h \
   include/linux/device.h \
     $(wildcard include/config/GENERIC_MSI_IRQ) \
     $(wildcard include/config/ENERGY_MODEL) \
@@ -903,12 +897,10 @@ deps_/home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/vpb_uart.o 
     $(wildcard include/config/ACPI) \
   include/linux/device/class.h \
   include/linux/device/driver.h \
-  include/linux/module.h \
   arch/arm/include/asm/device.h \
     $(wildcard include/config/ARM_DMA_USE_IOMMU) \
     $(wildcard include/config/ARCH_OMAP) \
   include/linux/pm_wakeup.h \
-  /home/david/Documents/GitHub/Embedded-OS/lab4/uart_linux_driver/linux/mutex.h \
   arch/arm/include/asm/io.h \
     $(wildcard include/config/PCI) \
     $(wildcard include/config/PCMCIA) \
