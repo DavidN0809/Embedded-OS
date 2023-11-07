@@ -20,20 +20,21 @@ int main(void) {
 
     // Flushing the output buffer to make sure the data is sent.
    // fflush(uart_dev);
-    
+/*    
     fputs(" entering fgetc ",uart_dev);
     int c = fgetc(uart_dev);
     fputs("\n passing fgetc ",uart_dev);
- /*   if (c == EOF) {
+    if (c == EOF) {
         perror("Error receiving character");
         fclose(uart_dev);
         return -1;
     }
 
-    fputc(c, uart_dev); // Echo the received character back. */
+    fputc(c, uart_dev); // Echo the received character back. 
     fputs("passing fputc",uart_dev);
     // Flushing the output buffer to make sure the data is sent.
     fflush(uart_dev);
+    */
     
     fclose(uart_dev);
     return 0;
