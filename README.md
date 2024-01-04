@@ -23,3 +23,9 @@ After this lab, you will be able to
   - Build a Linux kernel image for ARM Versatile board
   - Build a root file system with Busybox
   - Use Buildroot to build an embedded Linux file system, and test application
+
+## Lab 4
+### Goals
+After this lab, you will be able to
+  -	Write a simple character driver for an “in-memory device” for ARM Linux
+  -	Write a polling based UART driver for ARM Linux
